@@ -1,0 +1,75 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@android:color/background_light"
+    android:orientation="vertical"
+    tools:context=".AlarmActivity">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="Set Date and Time"
+        android:textColor="?attr/actionMenuTextColor"
+        android:textSize="40px"
+        android:textStyle="bold" />
+
+    <DatePicker
+        android:id="@+id/datepicker"
+        style="@android:style/TextAppearance.DeviceDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="286dp"
+        android:layout_gravity="center"
+        android:calendarViewShown="false"
+        android:minDate="ystem.currentTimeMillis()"
+        android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" />
+
+    <TimePicker
+        android:id="@+id/pickertime"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:timePickerMode="spinner" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/setalarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Set Alarm" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel Alarm" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/AlarmPrompt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+</ScrollView>
